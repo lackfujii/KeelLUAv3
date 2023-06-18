@@ -1,0 +1,100 @@
+
+
+--██╗░░██╗███████╗███████╗██╗░░░░░░░░██╗░░░░░██╗░░░██╗░█████╗░
+--██║░██╔╝██╔════╝██╔════╝██║░░░░░░░░██║░░░░░██║░░░██║██╔══██╗
+--█████═╝░█████╗░░█████╗░░██║░░░░░░░░██║░░░░░██║░░░██║███████║
+--██╔═██╗░██╔══╝░░██╔══╝░░██║░░░░░░░░██║░░░░░██║░░░██║██╔══██║
+--██║░╚██╗███████╗███████╗███████╗██╗███████╗╚██████╔╝██║░░██║
+--╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝╚═╝╚══════╝░╚═════╝░╚═╝░░╚═╝
+
+
+
+--███╗░░░███╗░█████╗░██████╗░███████╗  ██████╗░██╗░░░██╗  ██╗░░░░░░█████╗░░█████╗░██╗░░██╗
+--████╗░████║██╔══██╗██╔══██╗██╔════╝  ██╔══██╗╚██╗░██╔╝  ██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
+--██╔████╔██║███████║██║░░██║█████╗░░  ██████╦╝░╚████╔╝░  ██║░░░░░███████║██║░░╚═╝█████═╝░
+--██║╚██╔╝██║██╔══██║██║░░██║██╔══╝░░  ██╔══██╗░░╚██╔╝░░  ██║░░░░░██╔══██║██║░░██╗██╔═██╗░
+--██║░╚═╝░██║██║░░██║██████╔╝███████╗  ██████╦╝░░░██║░░░  ███████╗██║░░██║╚█████╔╝██║░╚██╗
+--╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝  ╚═════╝░░░░╚═╝░░░  ╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
+
+
+--// Owner of this script : lack#7588
+
+getgenv().Keel = {
+    General = {
+        Notifications = false,
+        FOVMode = "PredictionPoint"
+    },
+    Silent = {
+        Main = {
+            Enabled = true,
+            Mode = "Target",
+            Toggle = "c",
+            Prediction = 0.134,
+            Parts = {"Head","LowerTorso","UpperTorso"}
+        },
+        FOV = {
+            ShowFOV = false,
+            Radius = 35,
+            Color = Color3.fromRGB(0, 71, 171),
+            Filled = false,
+            Transparency = 0.8
+        }
+    },
+    Camlock = {
+        Main = {
+            Enabled = true,
+            Key = "q", -- // Set as any keybind u want so u can lock onto them..
+            UnlockKey = "e", -- // unlocks people  // you can change this whatever you wnat
+            SmoothLock = true, -- // true means its like smooth not blatant
+            Smoothness = 0.0312, -- // Higher u go more blatant
+            PredictMovement = true, -- // PredictsMovement if true it does, if false it don't Predict
+            Prediction = 0.072,
+            Shake = true, -- // If false then dont shake, True means its gonna shake
+            ShakeValue = 0, -- // if go higher you gonna have a seizure 
+            Parts = {"Head"}
+        },
+        FOV = {
+            UseFOV = true, -- // Ur Choice to turn it on or off
+            ShowFOV = false,
+            Radius = 55,
+            Color = Color3.fromRGB(0, 71, 171),
+            Filled = false,
+            Transparency = 0.4
+        }
+    },
+    Tracer = {
+        Enabled = false,
+        Color = Color3.fromRGB(137, 207, 240),
+        Transparency = 0.4,
+        Visible = false
+    },
+    AutoPrediction = { -- Do NOT disable auto pred it will break ur script fixing next update
+        Enabled = true,
+        ping20_30 = 0.102,
+        ping30_40 = 0.107,
+        ping40_50 = 0.11,
+        ping50_60 = 0.12731,
+        ping60_70 = 0.12731,
+        ping70_80 = 0.12951,
+        ping80_90 = 0.134,
+        ping90_100 = 0.138,
+        ping100_110 = 0.146,
+        ping110_120 = 0.1367,
+        ping120_130 = 0.1401,
+        ping130_140 = 0.1437,
+        ping140_150 = 0.153,
+        ping150_160 = 0.1514,
+        ping160_170 = 0.1663,
+        ping170_180 = 0.1672,
+        ping180_190 = 0.1848,
+        ping190_200 = 0.1865,
+    },
+    Key360 = {
+        Toggle = false, 
+        RotationSpeed = 1430, -- higher you go the faster the spin. 2500 is good
+        Keybind = Enum.KeyCode.V -- // You can change whatever key you want to 
+    },
+}
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lackfujii/KeelV2/main/Protected"))()
+ 
